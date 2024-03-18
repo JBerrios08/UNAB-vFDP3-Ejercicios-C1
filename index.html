@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">1️⃣Calculadora de Llamadas</h4>
+                        <div class="form-group">
+                            <label for="cantidadMinutos">Digitar la cantidad de minutos de la llamada:</label>
+                            <input type="number" class="form-control" id="cantidadMinutos">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">2️⃣Precio del Libro</h4>
+                        <div class="form-group">
+                            <label for="precioCosto">Digitar el precio del costo del libro:</label>
+                            <input type="number" class="form-control" id="precioCosto">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_2()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_2"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">3️⃣Préstamo</h4>
+                        <div class="form-group">
+                            <label for="montoInicial">Ingrese el monto del préstamo:</label>
+                            <input type="number" class="form-control" id="montoInicial">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_3()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">4️⃣Salario del Trabajador</h4>
+                        <div class="form-group">
+                            <label for="horasTrabajadas">Ingrese el número de horas trabajadas:</label>
+                            <input type="number" class="form-control" id="horasTrabajadas">
+                        </div>
+                        <div class="form-group">
+                            <label for="precioPorHora">Ingrese el precio por hora:</label>
+                            <input type="number" class="form-control" id="precioPorHora">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_4()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_4"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">5️⃣Categoría del Empleado</h4>
+                        <div class="form-group">
+                            <label for="codigo">Ingrese el código identificador de 3 cifras del empleado:</label>
+                            <input type="number" class="form-control" id="codigo">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_5()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_5"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">6️⃣Control de Alcoholemia</h4>
+                        <div class="form-group">
+                            <label for="tipoVehiculo">Ingrese el tipo de vehículo (C: Camión, A: Autobús, T: Turismo, M:
+                                Motocicleta):</label>
+                            <input type="text" class="form-control" id="tipoVehiculo">
+                        </div>
+                        <div class="form-group">
+                            <label for="indicador">Ingrese el indicador del control de alcoholemia:</label>
+                            <input type="number" class="form-control" id="indicador">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_6()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_6"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">7️⃣Tarifa de Transporte</h4>
+                        <div class="form-group">
+                            <label for="tipoVehiculo">Ingrese el tipo de vehículo (C: Camión, A: Automóvil):</label>
+                            <input type="text" class="form-control" id="tipoVehiculo">
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoHora">Ingrese el tipo de hora (H: Hora de alta congestión, N: Hora
+                                normal):</label>
+                            <input type="text" class="form-control" id="tipoHora">
+                        </div>
+                        <div class="form-group">
+                            <label for="numPasajeros">Ingrese el número de pasajeros:</label>
+                            <input type="number" class="form-control" id="numPasajeros">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_7()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_7"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">8️⃣Signo del Zodiaco</h4>
+                        <div class="form-group">
+                            <label for="dia">Ingrese el día de nacimiento:</label>
+                            <input type="number" class="form-control" id="dia">
+                        </div>
+                        <div class="form-group">
+                            <label for="mes">Ingrese el número de mes de nacimiento:</label>
+                            <input type="number" class="form-control" id="mes">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_8()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_8"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">9️⃣Calificación del Curso</h4>
+                        <div class="form-group">
+                            <label for="calificacion1">Ingrese la calificación 1:</label>
+                            <input type="number" class="form-control" id="calificacion1">
+                        </div>
+                        <div class="form-group">
+                            <label for="calificacion2">Ingrese la calificación 2:</label>
+                            <input type="number" class="form-control" id="calificacion2">
+                        </div>
+                        <div class="form-group">
+                            <label for="calificacion3">Ingrese la calificación 3:</label>
+                            <input type="number" class="form-control" id="calificacion3">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_9()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_9"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4 class="mb-4">🔟Descuento en Compra</h4>
+                        <div class="form-group">
+                            <label for="montoCompra">Ingrese el monto total de la compra en Bs.:</label>
+                            <input type="number" class="form-control" id="montoCompra">
+                        </div>
+                        <button class="btn btn-primary text-white my-2" onclick="calcular_10()">Calcular</button>
+                        <p class="bg-dark text-white p-2" id="resultado_10"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                        <h4>Conversor de Temperaturas</h4>
+                        <div class="form-group">
+                            <label for="inputTemperatura2">Ingrese la temperatura:</label>
+                            <input type="number" class="form-control" id="inputTemperatura2">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputUnidad2">Ingrese la unidad de temperatura (K, C, F, R):</label>
+                            <input type="text" class="form-control" id="inputUnidad2">
+                        </div>
+                        <button class="btn btn-primary my-2" onclick="convertirTemperatura()">Convertir</button>
+                        <p class="bg-dark text-white p-2" id="resultado2"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card m-2 bg-info shadow">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/ejercicio_1.js"></script>
+        <script src="./js/ejercicio_2.js"></script>
+        <script src="./js/ejercicio_3.js"></script>
+        <script src="./js/ejercicio_4.js"></script>
+        <script src="./js/ejercicio_5.js"></script>
+        <script src="./js/ejercicio_6.js"></script>
+        <script src="./js/ejercicio_7.js"></script>
+        <script src="./js/ejercicio_8.js"></script>
+        <script src="./js/ejercicio_9.js"></script>
+        <script src="./js/ejercicio_10.js"></script>
+        <script src="./js/ejercicio_temperaturas.js"></script>
+</body>
+
+</html>
